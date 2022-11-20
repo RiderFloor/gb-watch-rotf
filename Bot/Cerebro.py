@@ -37,7 +37,7 @@ class Cerebro(Browser):
 
         l = len(all_ids[:-40])
         x = random.choice(range(0, l))
-        return all_ids[x:]
+        return all_ids
 
     def load_routine(self):
         res = Routine()
