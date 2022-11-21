@@ -11,3 +11,4 @@ publitio
 colorama
 pynput
 flask
+waitress
