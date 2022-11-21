@@ -19,32 +19,20 @@ class StreamZZ:
             link = f'{base}?id={id}'
             links.append(link)
         
-        counter = 1
-        start = dt.now()
-        T = int((random.uniform(1, 5)) * 3600) # random 1-5 hours * 3600 seconds
+        
         for link in links:
             self.browser.open(link)
             if self.browser.await_loading():
 
                 if self.start_watching():
                     print_log(f'Watch.watch - is watching', level='MESS')
-                    t = 8
+                    t = 10
                     print_log(f'Watch.watch - waiting {t}min: {dt.now()}', level='MESS')
                     wait(t*60)  # video length
                     print_log(f'Watch.watch - finished watching', level='MESS')
 
-                    self.browser._take_snapshot(f'done-watching-{counter}')
-                    
-                    # crash here
-                    s = int((dt.now() - start).total_seconds())
-                    if s > T:
-                        # CRASH
-                        self.browser._set_up(self.job['site'])
-                        self.browser.open(link)
-                        self.browser.open('error')
-                    
-                    counter += 1
-                    self.browser.close_browser()
+                    self.browser._take_snapshot(f'done-watching-{link[-3:]}')
+                    #self.browser.close_browser()
 
     def start_watching(self):
         self.target_window_id = self.browser.get_current_tab_id()
