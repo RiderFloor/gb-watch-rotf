@@ -10,6 +10,3 @@ def star():
     return True
 
 
-def keep_alive():
-    t = Thread(target=star)
-    t.start()
