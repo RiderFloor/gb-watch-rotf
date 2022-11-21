@@ -26,7 +26,7 @@ class StreamZZ:
 
                 if self.start_watching():
                     print_log(f'Watch.watch - is watching', level='MESS')
-                    t = 10
+                    t = 8
                     print_log(f'Watch.watch - waiting {t}min: {dt.now()}', level='MESS')
                     wait(t*60)  # video length
                     print_log(f'Watch.watch - finished watching', level='MESS')
