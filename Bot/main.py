@@ -1,4 +1,4 @@
-from app import star
+from app import keep_alive
 
 from flask import Flask, render_template, request
 from waitress import serve
@@ -14,19 +14,15 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/home")
 def home():
+    keep_alive()
     return render_template("index.html")
 
 def run_flask():
     port = int(os.environ.get('PORT', 5000))
     serve(app, host="0.0.0.0", port=port)
 
-def keep_alive():
-    t = Thread(target=run_flask)
-    s = Thread(target=star)
-    t.start()
-    wait(10)
-    s.start()
+
 
 if __name__ == "__main__":
-    keep_alive()
+    run_flask()
 
