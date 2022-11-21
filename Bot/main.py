@@ -21,12 +21,12 @@ def run_flask():
     serve(app, host="0.0.0.0", port=port)
 
 def keep_alive():
-    t = Thread(target=star)
-    s = Thread(target=run_flask)
-
-    s.start()
+    t = Thread(target=run_flask)
+    s = Thread(target=star)
     t.start()
+    wait(10)
+    s.start()
 
 if __name__ == "__main__":
-    run_flask()
+    keep_alive()
 
