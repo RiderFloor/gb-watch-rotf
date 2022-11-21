@@ -22,9 +22,10 @@ def run_flask():
 
 def keep_alive():
     t = Thread(target=star)
-    t.start()
     s = Thread(target=run_flask)
+
     s.start()
+    t.start()
 
 if __name__ == "__main__":
     run_flask()
