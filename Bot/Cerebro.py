@@ -29,7 +29,7 @@ class Cerebro:
 
     def __get_sequence(self):
         all_ids = []
-        for i in range(55, 85):
+        for i in range(1, 85):
             all_ids.append(str(i))
 
         #l = len(all_ids[:-60])
