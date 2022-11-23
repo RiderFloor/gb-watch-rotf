@@ -32,12 +32,12 @@ class Cerebro(Browser):
 
     def __get_sequence(self):
         all_ids = []
-        for i in range(1, 65):
+        for i in range(55, 85):
             all_ids.append(str(i))
 
-        l = len(all_ids[:-40])
-        x = random.choice(range(1, l))
-        return all_ids[x:]
+#        l = len(all_ids[:-60])
+ #       x = random.choice(range(1, l))
+        return all_ids
 
     def load_routine(self):
         res = Routine()

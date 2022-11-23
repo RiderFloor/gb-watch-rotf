@@ -26,13 +26,13 @@ class StreamZZ:
 
                 if self.start_watching():
                     print_log(f'Watch.watch - is watching', level='MESS')
-                    t = 10
+                    t = 8
                     print_log(f'Watch.watch - waiting {t}min: {dt.now()}', level='MESS')
                     wait(t*60)  # video length
                     print_log(f'Watch.watch - finished watching', level='MESS')
 
                     self.browser._take_snapshot(f'done-watching-{link[-3:]}')
-                    #self.browser.close_browser()
+                    self.browser.close_browser()
 
     def start_watching(self):
         self.target_window_id = self.browser.get_current_tab_id()
