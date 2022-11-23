@@ -32,9 +32,9 @@ class Cerebro:
         for i in range(1, 85):
             all_ids.append(str(i))
 
-        #l = len(all_ids[:-60])
-        #x = random.choice(range(1, l))
-        return all_ids
+        l = len(all_ids[:-10])
+        x = random.choice(range(0, l))
+        return all_ids[x:]
 
     def load_routine(self):
         res = Routine()
