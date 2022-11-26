@@ -32,4 +32,3 @@ RUN apt-get install -y scrot
 COPY SCREENSHOTS /app/SCREENSHOTS
 COPY Bot /app/Bot
 ENTRYPOINT ["python3", "/app/Bot/main.py"]
-#ENTRYPOINT ["sh"]
