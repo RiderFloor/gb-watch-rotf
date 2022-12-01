@@ -23,6 +23,7 @@ def build():
             'main': ['GbCerebro']
         }
     }
+    
     pprint('# INFO: app.py: building scripts')
     builder = ScriptBuilder()
     builder.build(instructions['scripts'])
