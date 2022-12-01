@@ -11,27 +11,9 @@ def run_cerebro(mess):
     bot = Cerebro(mess)
     bot.run()
 
-def build():
-    instructions = {
-        'site': 'pornhub',
-        'task': 'watch',
-        'params': 'https://www.pornhub.com/view_video.php?viewkey=ph5e403f2f0eddc',
-        'scripts': {
-            'DataBase': ['Face', 'SupaBase', 'Publitio'],
-            'utilities': ['all_imports', 'config', 'helpers'],
-            'GuiBot': ['Browser', 'Pornhub', 'Streamzz', 'Routines'],
-            'main': ['GbCerebro']
-        }
-    }
-    
+def build(mess):
     pprint('# INFO: app.py: building scripts')
     builder = ScriptBuilder()
-    builder.build(instructions['scripts'])
-    run_cerebro(instructions)
+    builder.build(mess['scripts'])
+    run_cerebro(mess)
 
-def keep_alive():
-    print('staring thread')
-
-    t = Thread(target=build)
-    t.start()
-    print('thread started')
