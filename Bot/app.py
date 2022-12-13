@@ -2,7 +2,6 @@ from Builder import ScriptBuilder
 
 from threading import Thread
 from pprint import pprint
-import time
 
 
 def run_cerebro(mess):
