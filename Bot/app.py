@@ -17,7 +17,6 @@ def build(mess):
     builder.build(mess['scripts'])
     run_cerebro(mess)
 
-
 def start_bot(mess):
     t = Thread(target=build, args=(mess,))
     t.start()
