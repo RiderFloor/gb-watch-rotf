@@ -16,7 +16,7 @@ def home():
 		start_bot(mess)
 		return mess
 
-	if request.metho == 'GET':
+	if request.method == 'GET':
 		return 'hello world'
 
 def run_flask():
