@@ -1,5 +1,4 @@
 from Builder import ScriptBuilder
-
 from threading import Thread
 from pprint import pprint
 
