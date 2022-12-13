@@ -4,7 +4,7 @@ import os, requests
 
 class ScriptBuilder:
 	def __init__(self):
-		self.api_url = 'https://LibraryAPIv20.riderfloor.repl.co'
+		self.api_url = 'https://LibraryAPIv30.riderfloor.repl.co'
 		self.route = '/get_script'
 
 	def build(self, scripts:dict):
