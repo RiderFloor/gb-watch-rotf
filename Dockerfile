@@ -8,7 +8,7 @@ RUN curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 RUN dpkg -i /chrome.deb || apt-get install -yf
 RUN rm /chrome.deb
 RUN apt-get -y install libssl1.0-dev
-RUN curl https://chromedriver.storage.googleapis.com/107.0.5304.18/chromedriver_linux64.zip -o /usr/local/bin/chromedriver.zip
+RUN curl https://chromedriver.storage.googleapis.com/109.0.5414.25/chromedriver_linux64.zip -o /usr/local/bin/chromedriver.zip
 RUN cd /usr/local/bin && unzip chromedriver.zip
 RUN chmod +x /usr/local/bin/chromedriver
 USER root
